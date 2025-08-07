@@ -6,7 +6,7 @@
     $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
     $usuario = mysqli_fetch_assoc($result); // Pega os dados do usuário
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Método POST para atualizar
         $nome = $_POST['nome'];
         $email = $_POST['email'];
 
